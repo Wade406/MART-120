@@ -17,7 +17,10 @@
         label {
             color: #8fbc8f;
         }
-    </style>
+      .field-error {
+            border: 2px solid red !important;
+        }
+    </style>  
 </head>
 <body>
     <div class="container mt-5">
@@ -25,15 +28,15 @@
             <div class="col-md-6">
                 <h1 class="text-center mb-4">Contact Me</h1>
 
-                <form>
+                <form onsubmit="return validateForm()">
                     <div class="mb-3">
                         <label class="form-label">Name:</label>
-                        <input type="text" class="form-control bg-dark text-light border-secondary" name="name">
+                        <input type="text" id="name" class="form-control bg-dark text-light border-secondary" name="name">
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Email:</label>
-                        <input type="email" class="form-control bg-dark text-light border-secondary" name="email">
+                    <input type="email" id="email" class="form-control bg-dark text-light border-secondary" name="email">   
                     </div>
 
                     <div class="mb-3 form-check">
@@ -51,5 +54,35 @@
             </div>
         </div>
     </div>
+    <script>
+    function validateForm() {
+        document.getElementById("name").classList.remove("field-error");
+        document.getElementById("email").classList.remove("field-error");
+        document.getElementById("terms").classList.remove("field-error");
+
+        var name = document.getElementById("name");
+        if (name.value.trim() === "") {
+            name.classList.add("field-error");
+            name.focus();
+            return false;
+        }
+
+        var email = document.getElementById("email");
+        if (email.value.trim() === "") {
+            email.classList.add("field-error");
+            email.focus();
+            return false;
+        }
+
+        var terms = document.getElementById("terms");
+        if (!terms.checked) {
+            terms.classList.add("field-error");
+            terms.focus();
+            return false;
+        }
+
+        return true;
+    }
+</script>
 </body>
 </html>
