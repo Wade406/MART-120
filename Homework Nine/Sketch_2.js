@@ -77,10 +77,10 @@ triangle(
 );
   
   // Nose highlight triangle - bright/light tone
-fill(240, 180, 60);  // warm light - we'll go psychedelic later
+fill(240, 180, 60);  // warm light
 noStroke();
 triangle(
-  237, 510,  // bottom left (start here per assignment)
+  237, 510,  // bottom left
   270, 375,  // top middle (bridge of nose)
   305, 500   // bottom right
 );
