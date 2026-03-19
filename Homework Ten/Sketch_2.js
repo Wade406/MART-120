@@ -1,5 +1,7 @@
 function setup() {
   createCanvas(600, 800);
+  chinSpeedY = random(0.001, 0.004);
+  chinSpeedX = random(0.001, 0.004);
 }
 
 function draw() {
@@ -88,7 +90,7 @@ triangle(
   // Beard / mustache area - white beard
 fill(200, 220, 240);  // off-white
 noStroke();
-rect(240, 550, 138, 80);
+rect(240 + sin(frameCount * chinSpeedX) * 5, 550 + sin(frameCount * chinSpeedY) * 5, 138, 80);
 
 // Hair - dark left side
 fill(45, 35, 90);
@@ -128,13 +130,10 @@ textSize(titleSize);
 textAlign(CENTER);
 text('Self Portrait', 300, 45);
 
-
 // Title underline
 stroke(180, 180, 255);  // same lavender as the title text
 strokeWeight(1);
 let underlineWidth = 75 + sin(frameCount * 0.002) * 30;
-stroke(180, 180, 255);
-strokeWeight(1);
 line(300 - underlineWidth, 55, 300 + underlineWidth, 55);
 
   // Name
@@ -148,5 +147,4 @@ text('Wade Pose', 500, 778);
 strokeWeight(5);
 stroke(180, 180, 255);
 point(430, 771);
-
 }
