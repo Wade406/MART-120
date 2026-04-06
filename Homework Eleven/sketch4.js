@@ -141,7 +141,7 @@ function draw() {
   strokeWeight(6);
   rect(3, 3, canvasW - 6, canvasH - 6);
 
-  // Exit marker — electric blue, drawn after border so it shows on top
+  // Exit marker — electric blue
   stroke(0, 200, 255);
   strokeWeight(6);
   line(5*cellSize, canvasH - 3, 6*cellSize, canvasH - 3);
