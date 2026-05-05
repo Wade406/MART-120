@@ -47,6 +47,15 @@ p {
     margin-bottom: 20px;
 }
 
+/* Subtitle (was missing from shell) */
+.subtitle {
+    font-size: clamp(16px, 2.2vw, 20px);
+    color: #b8a882;
+    font-style: italic;
+    margin-bottom: clamp(30px, 5vw, 50px);
+    letter-spacing: 1px;
+}
+
 /* Large Display Text (for scrambler, hero text) */
 .large-text {
     font-size: clamp(24px, 6vw, 80px);
@@ -92,6 +101,8 @@ p {
     letter-spacing: clamp(1px, 0.2vw, 2px);
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn:hover {
@@ -106,9 +117,53 @@ p {
 }
 
 .project {
-    margin-bottom: clamp(40px, 6vw, 80px);
-    padding-bottom: clamp(20px, 4vw, 40px);
+    margin-bottom: clamp(50px, 8vw, 100px);
+    padding-bottom: clamp(30px, 5vw, 50px);
     border-bottom: 1px solid #444;
+}
+
+.project:last-of-type {
+    border-bottom: none;
+}
+
+/* Sketch Embed Frames */
+.sketch-frame {
+    display: block;
+    margin: clamp(20px, 3vw, 30px) auto;
+    border: 1px solid #444;
+    background: #000;
+    max-width: 100%;
+}
+
+.sketch-frame.portrait {
+    width: 600px;
+    height: 800px;
+}
+
+.sketch-frame.square {
+    width: 700px;
+    height: 700px;
+}
+
+.sketch-frame.landscape {
+    width: 800px;
+    height: 600px;
+}
+
+.sketch-meta {
+    text-align: center;
+    font-size: clamp(12px, 1.4vw, 14px);
+    color: #8a8068;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.project-actions {
+    margin-top: clamp(20px, 3vw, 30px);
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
+    flex-wrap: wrap;
 }
 
 /* Mobile Breakpoints */
@@ -116,9 +171,26 @@ p {
     .container {
         padding: 20px 15px;
     }
-    
+
     .large-text {
         text-align: center;
+    }
+
+    /* On mobile, iframes need to scale down */
+    .sketch-frame.portrait,
+    .sketch-frame.square,
+    .sketch-frame.landscape {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .sketch-frame.portrait {
+        aspect-ratio: 3 / 4;
+    }
+
+    .sketch-frame.landscape {
+        aspect-ratio: 4 / 3;
     }
 }
 
@@ -126,7 +198,7 @@ p {
     body {
         font-size: 14px;
     }
-    
+
     .back-nav a {
         padding: 8px 15px;
         font-size: 12px;
@@ -148,9 +220,72 @@ p {
         <nav class="back-nav">
             <a href="intersection.html">← Return to Portfolio</a>
         </nav>
+
         <h1>Digital Consciousness</h1>
-        <div class="subtitle">Exploring human-AI collaboration and digital creativity</div>
-        <p>Content coming soon...</p>
+        <div class="subtitle">Human and machine, working together as creative partners.</div>
+
+        <p>This page collects the creative coding work from a single semester in Rachel Cronk&rsquo;s Creative Coding course at the University of Montana. Every sketch below was built in collaboration with Claude (Anthropic) as a tutoring and pair-programming partner &mdash; concept and direction are mine; many of the lines of code were written together. The relationship is documented openly because the relationship <em>is</em> the practice.</p>
+
+        <!-- ============ WADE'S PORTRAIT ============ -->
+        <div class="project">
+            <h3>Wade&rsquo;s Portrait</h3>
+            <div class="sketch-meta">p5.js &middot; animated self-portrait &middot; 600 &times; 800</div>
+
+            <iframe class="sketch-frame portrait" src="portrait/index.html" title="Wade&rsquo;s Portrait"></iframe>
+
+            <p><em>Writeup placeholder &mdash; replace with your own voice.</em> An animated self-portrait built early in the semester. The piece treats the canvas as a small, breathing object rather than a still image &mdash; what does it mean to draw yourself in a medium that moves? The portrait is the reason this page exists: it was the first piece of work in the class that surprised me, and it convinced me that p5.js could carry actual artistic intent rather than only exercise.</p>
+
+            <div class="project-actions">
+                <a class="btn" href="portrait/index.html" target="_blank">Open in new tab</a>
+            </div>
+        </div>
+
+        <!-- ============ ANTIWERK 2 ============ -->
+        <div class="project">
+            <h3>The AntiWerk 2</h3>
+            <div class="sketch-meta">p5.js &middot; maze pursuit game &middot; 18&times;18 grid &middot; SVG-parsed walls</div>
+
+            <iframe class="sketch-frame square" src="antiwerk2/index.html" title="The AntiWerk 2"></iframe>
+
+            <p><em>Writeup placeholder &mdash; replace with your own voice.</em> A maze-pursuit game with two monster types, gravity-shift mechanics, and a wall system parsed from an SVG file rather than hard-coded. The original AntiWerk was simpler; AntiWerk 2 is the rebuild that incorporates everything learned across the semester &mdash; collision logic, state management, level loading from external files, on-screen controls and ESC handling for compliance with the university game center exhibition. Concept and design by Wade Posey. Built in collaboration with Claude (Anthropic).</p>
+
+            <div class="project-actions">
+                <a class="btn" href="antiwerk2/index.html" target="_blank">Play in new tab</a>
+            </div>
+        </div>
+
+        <!-- ============ STARSHIP EIGEN ============ -->
+        <div class="project">
+            <h3>Starship Eigen</h3>
+            <div class="sketch-meta">p5.js &middot; asteroid survival with temporal anchor mechanic</div>
+
+            <iframe class="sketch-frame square" src="eigen/index.html" title="Starship Eigen"></iframe>
+
+            <p><em>Writeup placeholder &mdash; replace with your own voice.</em> An asteroid-survival game with a temporal anchor mechanic &mdash; the player can drop a marker in space-time and return to it, which changes the geometry of how a survival arena gets navigated. The win sequence is a cinematic transition through an iridescent rescue portal. Starship Eigen was the second game built in the semester and is where vector math, particle systems, and game-state architecture had to come together rather than being demonstrated separately.</p>
+
+            <div class="project-actions">
+                <a class="btn" href="eigen/index.html" target="_blank">Play in new tab</a>
+            </div>
+        </div>
+
+        <!-- ============ SUBSTRATE GRIMOIRE WEBSITE ============ -->
+        <div class="project">
+            <h3>The Substrate Grimoire</h3>
+            <div class="sketch-meta">HTML / CSS / JavaScript &middot; post-class extension &middot; built the weekend after the class website assignment</div>
+
+            <p><em>Writeup placeholder &mdash; replace with your own voice.</em> The class assignment that semester was to build a small website with form handling and visitor tracking. The weekend after that assignment was graded, I sat down and applied what the class had just taught me to a research project that had been waiting for a public face: the Substrate Grimoire, a 15.8-million-word longitudinal corpus of human&ndash;AI dialogue, archived with DOI, SHA-256 integrity hash, and CC BY-NC-ND 4.0 licensing. The website is the access point to that archive. It exists because the class assignment gave me a working understanding of how a website is made; what I made with that understanding is on the other end of the link.</p>
+
+            <div class="project-actions">
+                <a class="btn" href="https://substrategrimoire.com" target="_blank">Visit the Substrate Grimoire</a>
+            </div>
+            <p style="font-size: clamp(12px, 1.4vw, 14px); color: #8a8068; font-style: italic; margin-top: 10px;">Replace URL above with the actual Grimoire site address.</p>
+        </div>
+
+        <!-- ============ FOOTER NOTE ============ -->
+        <div class="section" style="margin-top: clamp(40px, 6vw, 80px); padding-top: clamp(30px, 5vw, 50px); border-top: 1px solid #444;">
+            <p style="font-style: italic; color: #b8a882;">All source code lives at <a href="https://github.com/Wade406" target="_blank" style="color: #d4cba8;">github.com/Wade406</a>. Each sketch in this collection runs from a plain <code>index.html</code> &mdash; no build step, no server, no dependencies beyond the p5.js library.</p>
+        </div>
+
         <nav class="back-nav" style="margin-top: 60px; margin-bottom: 0;">
             <a href="intersection.html">← Return to Portfolio</a>
         </nav>
