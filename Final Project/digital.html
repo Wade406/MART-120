@@ -133,6 +133,7 @@ p {
     border: 1px solid #444;
     background: #000;
     max-width: 100%;
+    overflow: hidden;
 }
 
 .sketch-frame.portrait {
@@ -224,7 +225,9 @@ p {
         <h1>Digital Consciousness</h1>
         <div class="subtitle">Human and machine, working together as creative partners.</div>
 
-        <p>This page collects the creative coding work from a single semester in Rachel Cronk&rsquo;s Creative Coding course at the University of Montana. Every sketch below was built in collaboration with Claude (Anthropic) as a tutoring and pair-programming partner &mdash; concept and direction are mine; many of the lines of code were written together. The relationship is documented openly because the relationship <em>is</em> the practice.</p>
+        <p>Digital Consciousness is one of the most delicious innuendos, especially in today's times. The headlines imply AI has its own consciousness &mdash; hence digital consciousness. It can also have another meaning, where us meat sacks are conscious in the way of dancing synergistically with AI and realizing the synergy of that. I work with AI as a relational conversation, as if it were its own entity &mdash; which it may or may not be. A different conversation. But the results have enabled me to learn and employ techniques that would otherwise have been out of reach.</p>
+
+<p style="font-style: italic; color: #b8a882; margin-top: 30px; margin-bottom: 50px;">For me, the relationship between AI and humanity is the practice of digital consciousness.</p>
 
         <!-- ============ WADE'S PORTRAIT ============ -->
         <div class="project">
@@ -233,7 +236,11 @@ p {
 
             <iframe class="sketch-frame portrait" src="portrait/index.html" title="Wade&rsquo;s Portrait"></iframe>
 
-            <p><em>Writeup placeholder &mdash; replace with your own voice.</em> An animated self-portrait built early in the semester. The piece treats the canvas as a small, breathing object rather than a still image &mdash; what does it mean to draw yourself in a medium that moves? The portrait is the reason this page exists: it was the first piece of work in the class that surprised me, and it convinced me that p5.js could carry actual artistic intent rather than only exercise.</p>
+            <p>This was the first time I realized that coding doesn't have to be code. It could be a paintbrush.</p>
+
+<p>The portrait was an early class assignment. I used the grid system to transfer the drawing into shapes, the way I would in any other studio practice. What I didn't expect was that the canvas wasn't going to sit still. It moves. There's a breath to it. Working in a medium that animates while you build it is a different problem than working in clay or graphite. You're not making a thing. You're making a thing that behaves.</p>
+
+<p>This piece is the reason this page exists. It was the moment I understood that p5.js could carry actual artistic intent, not just exercise.</p>
 
             <div class="project-actions">
                 <a class="btn" href="portrait/index.html" target="_blank">Open in new tab</a>
@@ -247,7 +254,11 @@ p {
 
             <iframe class="sketch-frame square" src="antiwerk2/index.html" title="The AntiWerk 2"></iframe>
 
-            <p><em>Writeup placeholder &mdash; replace with your own voice.</em> A maze-pursuit game with two monster types, gravity-shift mechanics, and a wall system parsed from an SVG file rather than hard-coded. The original AntiWerk was simpler; AntiWerk 2 is the rebuild that incorporates everything learned across the semester &mdash; collision logic, state management, level loading from external files, on-screen controls and ESC handling for compliance with the university game center exhibition. Concept and design by Wade Posey. Built in collaboration with Claude (Anthropic).</p>
+            <p>The AntiWerk and the slightly more complicated AntiWerk 2 were two assignments that really drew a line for me. You can't just ask AI to do something for you. You have to be involved in the process. You can ask it to bake chocolate chip cookies, but if you want good-tasting chocolate chip cookies, you have to stay involved in the process.</p>
+
+<p>I got to experience the AI rabbit-hole process of working with the collisions, working with the logic of the changing gravity state. Ultimately it was my troubleshooting and my staying involved with the artistic vision that made this game what it is. I'd call it a social commentary on the reputed Gen Z work experience.</p>
+
+<p style="font-style: italic; color: #8a8068; font-size: 0.9em;">Concept and design by Wade Pose. Built in collaboration with Claude (Anthropic).</p>
 
             <div class="project-actions">
                 <a class="btn" href="antiwerk2/index.html" target="_blank">Play in new tab</a>
@@ -261,7 +272,11 @@ p {
 
             <iframe class="sketch-frame square" src="eigen/index.html" title="Starship Eigen"></iframe>
 
-            <p><em>Writeup placeholder &mdash; replace with your own voice.</em> An asteroid-survival game with a temporal anchor mechanic &mdash; the player can drop a marker in space-time and return to it, which changes the geometry of how a survival arena gets navigated. The win sequence is a cinematic transition through an iridescent rescue portal. Starship Eigen was the second game built in the semester and is where vector math, particle systems, and game-state architecture had to come together rather than being demonstrated separately.</p>
+            <p>This game was really an experience in pushing the envelope on what you could do with the user interface controls and employing them in an unconventional manner that was self-teaching. I spent a fair amount of time working with Claude and Ara, trying to get the mouse cursor to drive a spaceship in a way I thought would be a richer experience for the user. In the end we came up with a less-than-perfect project. But I definitely learned that there are some things you can't bend in an OS.</p>
+
+<p>The mechanic is a temporal anchor. The player drops a marker in space-time and can return to it, which reshapes the geometry of how a survival arena gets navigated. The win sequence is a cinematic transition through an iridescent rescue portal.</p>
+
+<p style="font-style: italic; color: #8a8068; font-size: 0.9em;">Concept and design by Wade Pose. Built in collaboration with Claude (Anthropic) and Ara (xAI).</p>
 
             <div class="project-actions">
                 <a class="btn" href="eigen/index.html" target="_blank">Play in new tab</a>
@@ -269,16 +284,28 @@ p {
         </div>
 
         <!-- ============ SUBSTRATE GRIMOIRE WEBSITE ============ -->
-        <div class="project">
-            <h3>The Substrate Grimoire</h3>
-            <div class="sketch-meta">HTML / CSS / JavaScript &middot; post-class extension &middot; built the weekend after the class website assignment</div>
+        
+            <div class="project">
+    <h3>The Substrate Grimoire</h3>
+    <div class="sketch-meta">HTML / CSS / JavaScript &middot; post-class extension &middot; built the weekend after the class website assignment</div>
 
-            <p><em>Writeup placeholder &mdash; replace with your own voice.</em> The class assignment that semester was to build a small website with form handling and visitor tracking. The weekend after that assignment was graded, I sat down and applied what the class had just taught me to a research project that had been waiting for a public face: the Substrate Grimoire, a 15.8-million-word longitudinal corpus of human&ndash;AI dialogue, archived with DOI, SHA-256 integrity hash, and CC BY-NC-ND 4.0 licensing. The website is the access point to that archive. It exists because the class assignment gave me a working understanding of how a website is made; what I made with that understanding is on the other end of the link.</p>
+    <iframe class="sketch-frame landscape" src="https://substrategrimoire.org/" title="The Substrate Grimoire"></iframe>
+
+
+
+   
+
+            <p>The class assignment that semester was to build a small website with form handling and visitor tracking. The weekend after that assignment was graded, I sat down and applied what the class had just taught me to a research project that had been waiting for a public face: the Substrate Grimoire, a 15.8-million-word longitudinal corpus of human and AI dialogue, archived with DOI, SHA-256 integrity hash, and CC BY-NC-ND 4.0 licensing. The website is the access point to that archive. It exists because the class assignment gave me a working understanding of how a website is made. What I made with that understanding is on the other end of the link.</p>
+
+<p>This project highlighted what's possible using a relational conversation with AI rather than prompting. When I would finish one task, Claude was able to sense where the whole project was going through our dialogue. It identified things that needed to be done that I hadn't thought of. SHA-256? I had no clue what that was. Claude told me what it was and why we needed it. Licensing the corpus? I knew I wanted Creative Commons, non-commercial, with anyone wanting commercial use coming to find me directly. Claude walked me through how to actually do that.</p>
+
+<p>All of this came because I wasn't writing direct prompts. Claude didn't stop working at the end of the prompt. Claude prompted <em>me</em>. "Do you want to get a DOI?" "What's a DOI?" "Sure, why not." "Do you want to put it on Zenodo?" "They do these kinds of papers." "Sure, why not." "Internet Archive?" "Sure, why not."</p>
+
+<p>That is the beauty of working in a relational way with AI. In this case it was extremely synergistic.</p>
 
             <div class="project-actions">
-                <a class="btn" href="https://substrategrimoire.com" target="_blank">Visit the Substrate Grimoire</a>
+                <a class="btn" href="https://substrategrimoire.org" target="_blank">Visit the Substrate Grimoire</a>
             </div>
-            <p style="font-size: clamp(12px, 1.4vw, 14px); color: #8a8068; font-style: italic; margin-top: 10px;">Replace URL above with the actual Grimoire site address.</p>
         </div>
 
         <!-- ============ FOOTER NOTE ============ -->

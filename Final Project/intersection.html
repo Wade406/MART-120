@@ -87,7 +87,7 @@
 <body>
     <div class="intersection-container">
         <div class="scrambler large-text" id="scrambler">
-            Click to explore possibilities
+            explore possibilities
         </div>
         
         <button class="experience-button" id="experienceBtn">Experience</button>
@@ -193,9 +193,11 @@
             } else {
                 clearInterval(resolveInterval);
                 scrambler.textContent = targetText;
+                setTimeout(() => {
                 experienceBtn.classList.add('show');
+            }, 600);
             }
-        }, 60);
+        }, 65);
     }
 
     // Click resolved text → hide button and scramble again
